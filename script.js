@@ -12,3 +12,14 @@ function getComputerChoice () {
 }
 
 console.log(getComputerChoice())
+
+function getHumanChoice () {
+    // Ask an input from the user, strictly with the following choices: Rock, Paper or Scissors
+    // Store the user's input
+    // Return the user's input
+    const userInput = prompt("Rock, Paper, Scissors")
+
+    return userInput
+}
+
+console.log(getHumanChoice())
