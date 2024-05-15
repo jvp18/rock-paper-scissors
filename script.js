@@ -31,9 +31,6 @@ function playRound (humanChoice, computerChoice) {
     // Log the result, declaring who won and why
     humanChoice = humanChoice[0].toUpperCase() + humanChoice.slice(1, humanChoice.length).toLowerCase()
 
-    console.log(`Human choice: ${humanChoice}`)
-    console.log(`Computer chouce: ${computerChoice}`)
-
     if (humanChoice === "Rock") {
         if (computerChoice === "Rock") {
             console.log("It's a tie. You both chose Rock!"); 
