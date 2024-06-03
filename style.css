@@ -1,0 +1,131 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0 500px;
+    background-color: azure;
+    color: rgb(19, 100, 127);
+    font-weight: 1000
+}
+
+#main-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column ;
+    margin: 0 auto;
+    min-width: 1000px;
+    min-height: 1300px;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+#score-container #result-container, #buttons-container {
+    flex-grow: 2;
+}
+
+#buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+button {
+    flex: 1 1 auto; 
+    min-height: 160px;
+    max-width: 400px; 
+    border-radius: 60px;
+    border-style: none;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 5px 10px 0 rgba(0,0,0,0.2);  
+    color: white;
+    font-size: 46px;
+    font-weight: 1000;
+    cursor: pointer;
+    border-color: rgb(113, 181, 204);
+    background-color :rgb(113, 181, 204);    
+}
+
+
+#result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+#result {
+    font-size: 48px;
+}
+
+#score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 800px;
+    font-size: 38px;
+}
+
+#score {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    min-width: 800px;
+}
+
+#user, #comp {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 400px;
+    outline: 1.5px solid rgb(113, 181, 204);
+}
+
+#space {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 100px;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(113, 181, 204);
+    min-width: 400px;
+    color: white;
+}
+
+#you, #computer {
+    flex: 1 1 auto;
+    align-items: center;
+    max-height: 100px;
+}
+
+#user-score, #computer-score {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 100px;
+    align-items: center;
+}
+
+#end-game {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-self: center;
+    font-size: 46px;
+}
