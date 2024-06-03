@@ -43,9 +43,9 @@ function showWinner() {
     // After 5 rounds, will reveal which player won
     if (humanScore === 5 || computerScore === 5) {
         if (humanScore === 5) {
-            endGame.textContent = "Congratulations! You won best of 5!"
+            endGameDisplay.textContent = "Congratulations! You won best of 5!"
         } else {
-            endGame.textContent =  "Better luck next time!"
+            endGameDisplay.textContent =  "Better luck next time!"
         }
     }
 }
@@ -92,6 +92,15 @@ function playRound (humanChoice, computerChoice) {
 }
 
 
+function endGame () {
+    if (humanScore === 5 || computerScore === 5) {
+        buttons.forEach(button => {
+            button.removeEventListener("click", playGame);
+        });
+    }
+}
+
+
 function playGame (event) {
     const humanSelection = event.target.textContent;
     const computerSelection = getComputerChoice();
@@ -99,12 +108,7 @@ function playGame (event) {
     showHumanScore();
     showComputerScore();
     showWinner();
-    
-    if (humanScore === 5 || computerScore === 5) {
-        buttons.forEach(button => {
-            button.removeEventListener("click", playGame);
-        });
-    }
+    endGame ();
 }
 
 
