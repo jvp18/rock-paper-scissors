@@ -6,7 +6,7 @@ const resultText = document.createElement("span");
 const userScore = document.querySelector("#user-score")
 const compScore = document.querySelector("#computer-score")
 
-const endGame = document.querySelector("#end-game")
+const endGameDisplay = document.querySelector("#end-game")
 
 
 let humanScore = 0;
@@ -28,11 +28,13 @@ function getComputerChoice () {
 
 
 function showHumanScore () {
+    // Displays the human score in the DOM
     userScore.textContent = humanScore
 }
 
 
 function showComputerScore () {
+    // Displays the computer score in the DOM
     compScore.textContent = computerScore
 }
 
@@ -51,10 +53,9 @@ function showWinner() {
 
 function playRound (humanChoice, computerChoice) {
     // Takes two parameters humanChoice and computerChoice
-    // Convert humanChoice case sensitivity to be consistent
     // Compare humanChoice to computerChoice ie Rock vs Paper
-    // Update the scores accordingly
-    // Log the result, declaring who won and why
+    // Update the score variables accordingly
+    // Log the result and display it in the DOM
 
     if (humanChoice === "Rock") {
         if (computerChoice === "Rock") {
